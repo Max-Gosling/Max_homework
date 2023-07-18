@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(86, 126, 126);
+}
+.buttton{
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    background-color: white;
+    transition-property: background;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+.buttton:hover{
+    animation-name: colors;
+}
+@keyframes colors{
+    0%{
+        background: white;
+    }
+    100%{
+        background: green;
+    }
+}
