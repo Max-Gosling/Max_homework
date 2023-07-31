@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дз_3</title>
+</head>
+<body>
+    <script>
+        function calculate(){
+            var pay = prompt('Введите зарплату');
+            if (pay <= 100000){
+                return (pay - (pay*0.35));
+            }
+            else{ 
+                return (pay - (pay*0.45));
+            }
+        }
+        alert(calculate());
+    </script>
+</body>
+</html>
