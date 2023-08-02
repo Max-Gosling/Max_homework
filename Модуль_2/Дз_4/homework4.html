@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дз_4</title>
+</head>
+<style>
+    .button{
+        height: 100px;
+        width: 100px;
+    }
+</style>
+<body>
+    <script>
+        let citation = ['Memes - the DNA of the soul', 'I am the storm that is approaching', '........']
+        function citations(){
+            for (var i = 0; i!=citation.length; i++){
+                alert(citation[i])
+            }
+        }
+    </script>
+    <input class="button" type="button" value="Работает?" onclick="alert('Работает! Не трогай')">
+    <input class="button" type="button" value="Хмм...." onclick="citations()">
+</body>
+</html>
