@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дз_5</title>
+</head>
+<body>
+    <script>
+        var tasks = []
+        function add_task(){
+            // var tasks_list = document.getElementsByClassName('current') //находим элементы с названием класса и добавляем их в массив
+            // console.log(tasks_list.length) //ввыводим в консоль длину массива
+            // console.log(tasks_list[0].innerHTML) //добавляем первый элемент массива в код "как HTML"
+
+            // var tasks_list = document.getElementById('current') //находи один элемент по его id 
+            // console.log(tasks_list) //выводи в консоль
+
+            // var arr = document.getElementsByTagName('div') // находим все div'ы и кладем их в массив
+            // console.log(arr.length) //выводим в консоль длину массива
+            // console.log(arr[0]) // выводим первый элемент
+
+            var new_task = document.createElement('li') //создаем новый элемент списка в переменной
+            console.log(new_task) // выводим в косоль
+
+            var tasks_list = document.getElementById('current') //находим элемент по айди
+            tasks_list.appendChild(new_task) //добавляем этому элементу ребенка
+            console.log(tasks_list) // выводим в консоль
+        }
+
+        function del_tasks(){
+            var tasks_list = document.getElementsByClassName('current') //находим элемент по имени класса, чтобы был массив
+            console.log(tasks_list) //выводим в консоль
+            tasks_list.removeChild(tasks_list.childNodes[0]) //у элемента в массиве убираем дочерний узел по номеру(1)
+        }
+    </script>
+</body>
+</html>
