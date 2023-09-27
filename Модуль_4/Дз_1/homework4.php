@@ -1,11 +1,16 @@
-<form method="POST" name="" action="http://dota2.com/game.php">
-    <input type = "text" name="username" value="gamer"><br>
-    <input type = "passowrd" name="password" value="qwerty1234"><br>
-    <input type = "submit" value="Погнали"><br>
-</form>
 <?php
-	if (isset($_POST)) {
-		print($_POST['username']);
-		print($_POST['password']);
-	}
+$url = 'http://dota2.com/game.php';
+$params = array(
+    'username' => 'gamer', 
+    'password' => '123456qwerty', 
+);
+$result = file_get_contents($url, false, stream_context_create(array(
+    'http' => array(
+        'method'  => 'POST',
+        'header'  => 'Content-type: application/x-www-form-urlencoded',
+        'content' => http_build_query($params)
+    )
+)));
+
+echo $result;
 ?>
